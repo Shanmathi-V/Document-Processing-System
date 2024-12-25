@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter Options"
+        android:textSize="20sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- CardView for filter options -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor">
+
+        <RadioGroup
+            android:id="@+id/filterOptionsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/filterByPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_person_24"
+                android:drawablePadding="152dp"
+                android:text="Filter by Person"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryTextColor"
+                android:buttonTint="@color/accentColor"
+                android:paddingVertical="8dp"
+                android:checked="false"/>
+
+            <LinearLayout
+                android:id="@+id/personOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="32dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/filterById"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/filterByName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/filterByEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true"/>
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/filterByDocumentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/baseline_folder_zip_24"
+                android:drawablePadding="88dp"
+                android:text="Filter by Document Type"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryTextColor"
+                android:buttonTint="@color/accentColor"
+                android:paddingVertical="8dp"
+                android:checked="false"/>
+
+            <LinearLayout
+                android:id="@+id/documentOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="32dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:visibility="visible">
+
+                <CheckBox
+                    android:id="@+id/filterByApplications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Applications for bank accounts (credit card, savings account)"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/filterByIdentityDocs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identity documents (driver’s license, state/country identification, passport)"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/filterByFinancialDocs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supporting financial documents (income statements/paystubs, tax returns)"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true" />
+
+                <CheckBox
+                    android:id="@+id/filterByReceipts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receipts"
+                    android:textColor="@color/secondaryTextColor"
+                    android:paddingVertical="4dp"
+                    android:checked="true"
+                     />
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Apply Filter Button -->
+    <Button
+        android:id="@+id/applyFilterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

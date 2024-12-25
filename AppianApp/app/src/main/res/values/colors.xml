@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Primary text color for titles and headings -->
+    <color name="primaryTextColor">#212121</color> <!-- Dark Gray -->
+
+    <!-- Secondary text color for descriptions and options -->
+    <color name="secondaryTextColor">#757575</color> <!-- Medium Gray -->
+
+    <!-- Accent color for interactive elements like buttons and radio buttons -->
+    <color name="accentColor">#FF5722</color> <!-- Deep Orange -->
+
+    <!-- Background color for the main layout -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Light Gray -->
+
+    <!-- Card background color -->
+    <color name="cardBackgroundColor">#ccffffff</color> <!-- White -->
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base color -->
+    <item android:drawable="@color/backgroundColor" />
+    <!-- Subtle rainbow gradient -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="45"
+                android:startColor="#FF9A9E"
+                android:centerColor="#fad0c4"
+                android:endColor="#fad0c4"
+                android:type="linear"
+                android:alpha="0.2" />
+        </shape>
+    </item>
+</layer-list>
